@@ -1,0 +1,41 @@
+//Procedure swap 
+
+PROCEDURE swap (var x , var y :INTEGER)
+
+VAR
+    z:INTEGER;
+
+BEGIN
+
+    z:=x;
+    x:=y;
+    y:=z;
+END
+
+
+ALGORITHM Tri_sélection 
+
+VAR
+    i,j,n:INTEGER;
+    arr : ARRAY_OF INTEGER;
+
+
+BEGIN
+
+    Write (the elements of the array arr[]);
+    Read(arr[i]);
+
+    n:=arr.length;
+
+    Read(n);
+
+
+FOR i FROM 1 TO n-2 STEP 1  DO
+    IF (arr[i]<arr[i-1] )THEN
+        swap([arr[i],arr[i-1]]);
+    END_IF
+
+    
+END_FOR
+
+END
